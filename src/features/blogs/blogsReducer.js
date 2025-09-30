@@ -1,27 +1,30 @@
 const initialState = {
-  pages: {}, // ✅ cache blogs per page
-  totalResults: 0,
   loading: false,
+  pages: {}, // {1: [...], 2: [...], ...}
+  totalResults: 0,
+  nextPages: {}, // {1: "cursorForPage2", 2: "cursorForPage3", ...}
   error: null,
 };
 
 export default function blogsReducer(state = initialState, action) {
   switch (action.type) {
     case "BLOGS_REQUEST":
-      return { ...state, loading: true, error: null };
+      return { ...state, loading: true };
 
-    case "BLOGS_SUCCESS": {
-      const { articles, totalResults, page } = action.payload;
+    case "BLOGS_SUCCESS":
       return {
         ...state,
         loading: false,
         pages: {
           ...state.pages,
-          [page]: articles, // ✅ store results under the page number
+          [action.payload.page]: action.payload.articles,
         },
-        totalResults: totalResults ?? state.totalResults,
+        nextPages: {
+          ...state.nextPages,
+          [action.payload.page]: action.payload.nextPage,
+        },
+        totalResults: action.payload.totalResults,
       };
-    }
 
     case "BLOGS_FAIL":
       return { ...state, loading: false, error: action.payload };

@@ -82,7 +82,7 @@ const Home = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {displayBlogs.map((b, i) => {
             const image =
-              b.urlToImage ||
+              b.image_url ||
               "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80";
 
             return (
@@ -94,6 +94,10 @@ const Home = () => {
                   src={image}
                   alt={b.title}
                   className="h-48 w-full object-cover group-hover:opacity-90 transition"
+                  onError={(e) => {
+                    e.currentTarget.src =
+                      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80";
+                  }}
                 />
                 <div className="p-4">
                   <h3 className="font-bold text-lg group-hover:text-yellow-400 transition line-clamp-2">
@@ -103,7 +107,7 @@ const Home = () => {
                     {b.description || "No description available."}
                   </p>
                   <a
-                    href={b.url}
+                    href={b.link}
                     target="_blank"
                     rel="noreferrer"
                     className="text-yellow-400 hover:underline mt-3 inline-block font-medium"

@@ -12,9 +12,9 @@ export const liteApi = axios.create({
 // NewsAPI for blogs/articles
 // NewsAPI expects an apiKey query parameter; we set default params so you don't repeat it.
 export const newsApi = axios.create({
-  baseURL: "https://newsapi.org/v2",
+  baseURL: "https://newsdata.io/api/1",
   params: {
-    apiKey: import.meta.env.VITE_NEWS_API_KEY || "",
+    apiKey: import.meta.env.VITE_NEWSDATA_API_KEY || "",
   },
 });
 
