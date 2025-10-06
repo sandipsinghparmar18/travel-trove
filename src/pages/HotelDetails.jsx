@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchHotelDetails } from "../features/hotels/hotelsActions";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/Common/Carousel/Carousel";
 import {
   addToWishlist,
   removeFromWishlist,

@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromWishlist } from "../features/wishlist/wishlistActions";
+import { Link } from "react-router-dom";
 
 const Favorites = () => {
   const items = useSelector((s) => s.wishlist.items);
@@ -36,7 +37,9 @@ const Favorites = () => {
               className="h-44 w-full object-cover"
             />
             <div className="p-3">
-              <h3 className="font-semibold">{h.name}</h3>
+              <Link to={`/hotels/${h.id}`}>
+                <h3 className="font-semibold">{h.name}</h3>
+              </Link>
               <p className="text-sm text-gray-600">{h.city}</p>
               <div className="mt-3 flex gap-2">
                 <button

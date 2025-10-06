@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   addToWishlist,
   removeFromWishlist,
-} from "../features/wishlist/wishlistActions";
+} from "../../features/wishlist/wishlistActions";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const HotelCard = ({ hotel }) => {
@@ -43,7 +43,11 @@ const HotelCard = ({ hotel }) => {
           onClick={toggleFav}
           className="absolute top-2 right-2 bg-white/80 hover:bg-white text-red-500 p-2 rounded-full transition"
         >
-          {isFav ? <FaHeart /> : <FaRegHeart />}
+          {isFav ? (
+            <FaHeart data-testid="filled-heart" />
+          ) : (
+            <FaRegHeart data-testid="outlined-heart" />
+          )}
         </button>
       </div>
 

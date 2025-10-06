@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaHeart, FaBars, FaTimes } from "react-icons/fa";
-import { TravelTroveLogo } from "../assets/Logo/TravelTroveLogo"; // place your logo.svg here or change path
+import { TravelTroveLogo } from "../../../public/TravelTroveLogo";
 
 const Header = () => {
   const wishlistCount = useSelector((state) => state.wishlist.items.length);
@@ -11,11 +11,9 @@ const Header = () => {
   return (
     <header className="bg-gray-800 shadow sticky top-0 z-50">
       <div className="container px-4 py-3 flex items-center justify-between">
-        {/* <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="logo" className="h-8 w-8 object-contain" />
-          <span className="font-bold text-lg text-primary">TravelTrove</span>
-        </Link> */}
-        <TravelTroveLogo />
+        <Link to="/">
+          <TravelTroveLogo />
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">

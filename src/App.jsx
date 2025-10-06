@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home";
 import Hotels from "./pages/Hotels";
 import HotelDetail from "./pages/HotelDetails";
 import Favorites from "./pages/Favorites";
 import Blogs from "./pages/Blogs";
-import About from "./pages/About";
+import About from "./pages/About/About";
 
 const App = () => {
   return (

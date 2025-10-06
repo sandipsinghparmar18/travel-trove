@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchHotels } from "../features/hotels/hotelsActions";
-import HotelCard from "../components/HotelCard";
-import Pagination from "../components/Pagination";
+import HotelCard from "../components/HotelCard/HotelCard";
+import Pagination from "../components/Common/Pagination/Pagination";
 import countries from "../data/countries.json";
 
 const Hotels = () => {

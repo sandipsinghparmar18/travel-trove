@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#2563eb" stroke="#fff" stroke-width="2"/>
+  
+  <!-- Simple airplane icon -->
+  <path d="M2 32 L62 10 L54 28 L62 36 L2 32 Z" fill="#fff" />
+  
+  <!-- Small travel pin -->
+  <circle cx="32" cy="40" r="6" fill="#facc15" stroke="#fff" stroke-width="2"/>
+</svg>

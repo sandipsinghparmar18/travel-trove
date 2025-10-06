@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineLocalLibrary } from "react-icons/md";
@@ -59,16 +58,22 @@ const Footer = () => {
             </button>
           </form>
           <div className="flex gap-3 mt-4 text-xl">
-            <a href="https://www.linkedin.com/in/sandip-singh-parmar-b29034251/">
+            <a
+              href="https://www.linkedin.com/in/sandip-singh-parmar-b29034251/"
+              aria-label="LinkedIn"
+            >
               <FaLinkedin className="hover:text-white" />
             </a>
             <a
               href="https://mern-portfolio-frontend-gy7s.onrender.com/"
-              aria-label="twitter"
+              aria-label="Portfolio"
             >
               <MdOutlineLocalLibrary className="hover:text-white" />
             </a>
-            <a href="https://github.com/sandipsinghparmar18">
+            <a
+              href="https://github.com/sandipsinghparmar18"
+              aria-label="GitHub"
+            >
               <FaGithub className="hover:text-white" />
             </a>
           </div>

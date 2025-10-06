@@ -12,7 +12,7 @@ const Home = () => {
       description:
         "From serene beaches to lush rice terraces, Bali offers a magical experience for every traveler.",
       url: "https://www.lonelyplanet.com/indonesia/bali",
-      urlToImage:
+      image_url:
         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -20,7 +20,7 @@ const Home = () => {
       description:
         "Discover the less-traveled towns and scenic spots across Europe that every wanderer should visit.",
       url: "https://www.travelandleisure.com/worlds-best-hidden-gems",
-      urlToImage:
+      image_url:
         "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80",
     },
     {
@@ -28,7 +28,7 @@ const Home = () => {
       description:
         "Traveling solo can be life-changing. Here are tips and destinations perfect for solo explorers.",
       url: "https://www.nomadicmatt.com/solo-travel-guide",
-      urlToImage:
+      image_url:
         "https://images.unsplash.com/photo-1502920514313-52581002a659?auto=format&fit=crop&w=800&q=80",
     },
   ];
@@ -96,7 +96,7 @@ const Home = () => {
                   className="h-48 w-full object-cover group-hover:opacity-90 transition"
                   onError={(e) => {
                     e.currentTarget.src =
-                      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80";
+                      "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80";
                   }}
                 />
                 <div className="p-4">

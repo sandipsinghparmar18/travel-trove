@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBlogs } from "../features/blogs/blogsActions";
-import Pagination from "../components/Pagination";
+import Pagination from "../components/Common/Pagination/Pagination";
 
 const Blogs = () => {
   const dispatch = useDispatch();
